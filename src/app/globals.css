@@ -1,9 +1,91 @@
 @import "tailwindcss";
 
+/* =========================
+   Tema claro — padrão
+========================= */
+
+:root {
+  --background: #f6f8fc;
+  --surface: #ffffff;
+
+  --foreground: #111827;
+  --muted-foreground: #5b6472;
+
+  --brand: #0d218a;
+  --brand-hover: #071a70;
+  --brand-dark: #06124b;
+  --brand-soft: #eaf0ff;
+
+  --border: #e2e8f0;
+  --focus-ring: #2946c7;
+
+  color-scheme: light;
+}
+
+/* =========================
+   Tema escuro — preparado
+   mas ainda não ativado
+========================= */
+
+[data-theme="dark"] {
+  --background: #070b12;
+  --surface: #11161e;
+
+  --foreground: #f2f4f7;
+  --muted-foreground: #b7bdc6;
+
+  --brand: #0d218a;
+  --brand-hover: #1738b8;
+  --brand-dark: #06124b;
+  --brand-soft: #101b40;
+
+  --border: #283244;
+  --focus-ring: #4f73ff;
+
+  color-scheme: dark;
+}
+
+/* =========================
+   Tailwind theme tokens
+========================= */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-soft: var(--brand-soft);
+
+  --color-border: var(--border);
+
+  --font-sans: var(--font-manrope);
+}
+
+/* =========================
+   Base global
+========================= */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: #2946c7;
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
 }

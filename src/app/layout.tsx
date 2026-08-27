@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import { Manrope } from "next/font/google";
+
 import "./globals.css";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "First Refrigeração",
@@ -14,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body className={`${manrope.variable} font-sans antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
