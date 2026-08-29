@@ -15,6 +15,7 @@
   --brand-hover: #071a70;
   --brand-dark: #06124b;
   --brand-soft: #eaf0ff;
+  --brand-accent: #0d218a;
 
   --border: #e2e8f0;
   --focus-ring: #2946c7;
@@ -38,6 +39,7 @@
   --brand-hover: #1738b8;
   --brand-dark: #06124b;
   --brand-soft: #101b40;
+  --brand-accent: #4f73ff;
 
   --border: #283244;
   --focus-ring: #4f73ff;
@@ -60,6 +62,7 @@
   --color-brand-hover: var(--brand-hover);
   --color-brand-dark: var(--brand-dark);
   --color-brand-soft: var(--brand-soft);
+  --color-brand-accent: var(--brand-accent);
 
   --color-border: var(--border);
 
