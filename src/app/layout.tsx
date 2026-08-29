@@ -15,16 +15,37 @@ export const metadata: Metadata = {
     "Peças e assistência técnica para linha branca em São Carlos.",
 };
 
+const themeInitScript = `
+  (function () {
+    try {
+      var savedTheme = localStorage.getItem("first-theme");
+
+      document.documentElement.dataset.theme =
+        savedTheme === "dark" ? "dark" : "light";
+    } catch {
+      document.documentElement.dataset.theme = "light";
+    }
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className={`${manrope.variable} font-sans antialiased`}>
-        {children}
-      </body>
-    </html>
-  );
+  <html lang="pt-BR" suppressHydrationWarning>
+    <head>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: themeInitScript,
+        }}
+      />
+    </head>
+
+    <body className={`${manrope.variable} font-sans antialiased`}>
+      {children}
+    </body>
+  </html>
+);
 }

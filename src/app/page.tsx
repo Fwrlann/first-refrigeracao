@@ -1,5 +1,10 @@
+import { Header } from "@/components/layout/Header";
+
 export default function Home() {
   return (
+    <>
+    <Header />
+
     <main className="min-h-screen py-16 md:py-20 lg:py-24">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <span className="text-sm font-bold uppercase tracking-wider text-brand">
@@ -43,5 +48,6 @@ export default function Home() {
         </div>
       </div>
     </main>
+    </>
   );
 }
