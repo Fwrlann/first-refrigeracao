@@ -19,6 +19,7 @@
 
   --border: #e2e8f0;
   --focus-ring: #2946c7;
+  --divider-strong: #c3cad6;
 
   color-scheme: light;
 }
@@ -43,6 +44,7 @@
 
   --border: #283244;
   --focus-ring: #4f73ff;
+  --divider-strong: #3a4659;
 
   color-scheme: dark;
 }
@@ -65,6 +67,7 @@
   --color-brand-accent: var(--brand-accent);
 
   --color-border: var(--border);
+  --color-divider-strong: var(--divider-strong);
 
   --font-sans: var(--font-manrope);
 }
