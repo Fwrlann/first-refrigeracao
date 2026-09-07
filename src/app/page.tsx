@@ -7,6 +7,7 @@ import {AboutSection} from "@/components/sections/AboutSection";
 import {AudienceSection} from "@/components/sections/AudienceSection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <AudienceSection />
         <DifferentialsSection/> 
         <FAQSection />
+        <ContactSection />
       </main>
     </>
   );
