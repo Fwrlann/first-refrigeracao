@@ -4,6 +4,8 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { ProductsSection } from "@/components/sections/ProductsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import {AboutSection} from "@/components/sections/AboutSection";
+import {AudienceSection} from "@/components/sections/AudienceSection";
+import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
         <ProductsSection />
         <ServicesSection />
         <AboutSection />
+        <AudienceSection />
+        <DifferentialsSection/> 
       </main>
     </>
   );
