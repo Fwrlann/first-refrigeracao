@@ -6,6 +6,7 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import {AboutSection} from "@/components/sections/AboutSection";
 import {AudienceSection} from "@/components/sections/AudienceSection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
+import { FAQSection } from "@/components/sections/FAQSection";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <AboutSection />
         <AudienceSection />
         <DifferentialsSection/> 
+        <FAQSection />
       </main>
     </>
   );

@@ -26,21 +26,18 @@ export function MobileMenu() {
 
         <div className="flex w-5 flex-col gap-1.5">
           <span
-            className={`h-0.5 w-full bg-foreground transition-transform ${
-              isOpen ? "translate-y-2 rotate-45" : ""
-            }`}
+            className={`h-0.5 w-full bg-foreground transition-transform ${isOpen ? "translate-y-2 rotate-45" : ""
+              }`}
           />
 
           <span
-            className={`h-0.5 w-full bg-foreground transition-opacity ${
-              isOpen ? "opacity-0" : ""
-            }`}
+            className={`h-0.5 w-full bg-foreground transition-opacity ${isOpen ? "opacity-0" : ""
+              }`}
           />
 
           <span
-            className={`h-0.5 w-full bg-foreground transition-transform ${
-              isOpen ? "-translate-y-2 -rotate-45" : ""
-            }`}
+            className={`h-0.5 w-full bg-foreground transition-transform ${isOpen ? "-translate-y-2 -rotate-45" : ""
+              }`}
           />
         </div>
       </button>
@@ -76,13 +73,13 @@ export function MobileMenu() {
               Sobre
             </Link>
 
-            <Link
+            <a
               href="#faq"
               onClick={closeMenu}
               className="border-b border-border py-4 font-semibold text-foreground transition-colors hover:text-brand"
             >
               FAQ
-            </Link>
+            </a>
 
             <Link
               href="#contato"
