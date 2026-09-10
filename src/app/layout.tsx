@@ -9,24 +9,38 @@ const manrope = Manrope({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "First Refrigeração",
-  description:
-    "Peças e assistência técnica para linha branca em São Carlos.",
-};
-
 const themeInitScript = `
-  (function () {
-    try {
-      var savedTheme = localStorage.getItem("first-theme");
+  try {
+    const savedTheme = localStorage.getItem("first-theme");
 
-      document.documentElement.dataset.theme =
-        savedTheme === "dark" ? "dark" : "light";
-    } catch {
-      document.documentElement.dataset.theme = "light";
-    }
-  })();
+    document.documentElement.dataset.theme =
+      savedTheme === "dark" ? "dark" : "light";
+  } catch {
+    document.documentElement.dataset.theme = "light";
+  }
 `;
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.firstrefrigeracao.com.br"),
+
+  title: {
+    default:
+      "First Refrigeração | Peças e Assistência Técnica em São Carlos",
+    template: "%s | First Refrigeração",
+  },
+
+  description:
+    "Peças para linha branca e assistência técnica em São Carlos. Atendimento para consumidores, técnicos, oficinas e empresas.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RootLayout({
   children,
@@ -34,18 +48,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html lang="pt-BR" suppressHydrationWarning>
-    <head>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: themeInitScript,
-        }}
-      />
-    </head>
+    <html
+      lang="pt-BR"
+      suppressHydrationWarning
+    >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: themeInitScript,
+          }}
+        />
+      </head>
 
-    <body className={`${manrope.variable} font-sans antialiased`}>
-      {children}
-    </body>
-  </html>
-);
+      <body className={`${manrope.variable} font-sans antialiased`}>
+        {children}
+      </body>
+    </html>
+  );
 }
