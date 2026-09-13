@@ -10,10 +10,12 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/layout/Footer";
 import {LocationSection} from "@/components/sections/LocationSection";
+import {LocalBusinessSchema} from "@/components/seo/LocalBusinessSchema";
 
 export default function Home() {
   return (
     <>
+      <LocalBusinessSchema />
       <Header />
 
       <main>
