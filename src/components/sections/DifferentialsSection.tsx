@@ -49,8 +49,7 @@ export function DifferentialsSection() {
                 key={item.title}
                 className="group relative border-b border-border py-8 last:border-b-0 lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
               >
-                <span className="text-5xl font-extrabold tracking-tight text-brand-soft transition-colors duration-200 group-hover:text-brand-accent sm:text-6xl">
-                  {String(index + 1).padStart(2, "0")}
+                <span className="text-5xl font-extrabold tracking-tight text-brand-accent/60 transition-colors duration-200 group-hover:text-brand-accent sm:text-6xl">                  {String(index + 1).padStart(2, "0")}
                 </span>
 
                 <h3 className="mt-6 max-w-sm text-xl font-extrabold leading-tight text-foreground sm:text-2xl">

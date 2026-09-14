@@ -12,6 +12,7 @@ export function Header() {
         <Link
           href="/"
           aria-label="First Refrigeração - Página inicial"
+          className="inline-flex min-h-12 items-center"
         >
           <Image
             src="/brand/logo-first-light.png"
