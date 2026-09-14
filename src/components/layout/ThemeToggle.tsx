@@ -58,11 +58,7 @@ export function ThemeToggle() {
         strokeWidth="1.8"
         aria-hidden="true"
       >
-        <circle
-          cx="12"
-          cy="12"
-          r="3.5"
-        />
+        <circle cx="12" cy="12" r="3.5" />
 
         <path
           strokeLinecap="round"

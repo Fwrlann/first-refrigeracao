@@ -23,7 +23,6 @@ export function MobileMenu() {
 
   return (
     <div className="lg:hidden">
-      {/* Botão */}
       <button
         type="button"
         onClick={toggleMenu}
@@ -57,7 +56,6 @@ export function MobileMenu() {
         </div>
       </button>
 
-      {/* Menu */}
       <div
         id="mobile-menu"
         aria-hidden={!isOpen}
