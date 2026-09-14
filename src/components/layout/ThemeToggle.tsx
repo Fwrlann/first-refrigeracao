@@ -11,9 +11,17 @@ export function ThemeToggle() {
 
     try {
       localStorage.setItem("first-theme", nextTheme);
-    } catch {
-      // O tema continua funcionando mesmo se o navegador
-      // bloquear o localStorage.
+    } catch {}
+
+    const themeColorMeta = document.querySelector(
+      'meta[name="theme-color"]'
+    );
+
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute(
+        "content",
+        nextTheme === "dark" ? "#070b12" : "#f6f8fc"
+      );
     }
   }
 
@@ -25,6 +33,7 @@ export function ThemeToggle() {
       title="Alternar tema"
       className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-surface text-foreground transition-colors hover:border-brand hover:text-brand"
     >
+      {/* Lua */}
       <svg
         className="theme-icon-moon h-5 w-5"
         viewBox="0 0 24 24"
@@ -40,6 +49,7 @@ export function ThemeToggle() {
         />
       </svg>
 
+      {/* Sol */}
       <svg
         className="theme-icon-sun h-5 w-5"
         viewBox="0 0 24 24"
@@ -48,11 +58,22 @@ export function ThemeToggle() {
         strokeWidth="1.8"
         aria-hidden="true"
       >
-        <circle cx="12" cy="12" r="3.5" />
+        <circle
+          cx="12"
+          cy="12"
+          r="3.5"
+        />
 
         <path
           strokeLinecap="round"
-          d="M12 2.5v2M12 19.5v2M21.5 12h-2M4.5 12h-2M18.72 5.28l-1.42 1.42M6.7 17.3l-1.42 1.42M18.72 18.72l-1.42-1.42M6.7 6.7 5.28 5.28"
+          d="M12 2.5v2
+             M12 19.5v2
+             M21.5 12h-2
+             M4.5 12h-2
+             M18.72 5.28l-1.42 1.42
+             M6.7 17.3l-1.42 1.42
+             M18.72 18.72l-1.42-1.42
+             M6.7 6.7 5.28 5.28"
         />
       </svg>
     </button>

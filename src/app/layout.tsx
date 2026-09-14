@@ -12,11 +12,30 @@ const manrope = Manrope({
 const themeInitScript = `
   try {
     const savedTheme = localStorage.getItem("first-theme");
+    const theme = savedTheme === "dark" ? "dark" : "light";
 
-    document.documentElement.dataset.theme =
-      savedTheme === "dark" ? "dark" : "light";
+    document.documentElement.dataset.theme = theme;
+
+    const themeColorMeta = document.querySelector(
+      'meta[name="theme-color"]'
+    );
+
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute(
+        "content",
+        theme === "dark" ? "#070b12" : "#f6f8fc"
+      );
+    }
   } catch {
     document.documentElement.dataset.theme = "light";
+
+    const themeColorMeta = document.querySelector(
+      'meta[name="theme-color"]'
+    );
+
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute("content", "#f6f8fc");
+    }
   }
 `;
 
@@ -84,6 +103,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
+        <meta
+          id="theme-color-meta"
+          name="theme-color"
+          content="#f6f8fc"
+          suppressHydrationWarning
+        />
+
         <script
           dangerouslySetInnerHTML={{
             __html: themeInitScript,
