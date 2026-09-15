@@ -2,12 +2,12 @@ const faqs = [
   {
     question: "A First realiza atendimento em domicílio?",
     answer:
-      "Sim. Em São Carlos, o atendimento em domicílio está disponível para determinados equipamentos, como lavadoras, lava e seca, secadoras e geladeiras.",
+      "Sim. Em São Carlos, o atendimento em domicílio está disponível para determinados equipamentos, como lavadoras, lava e seca e geladeiras.",
   },
   {
     question: "Quais equipamentos posso levar até a loja?",
     answer:
-      "A First realiza atendimento na loja para equipamentos como purificadores, bebedouros, micro-ondas e fornos.",
+      "A First realiza atendimento na loja para equipamentos como purificadores, bebedouros, micro-ondas, fornos e secadoras.",
   },
   {
     question: "A First vende peças para técnicos e oficinas?",

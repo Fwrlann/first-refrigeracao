@@ -3,12 +3,12 @@ const storeServices = [
   "Bebedouros",
   "Micro-ondas",
   "Fornos",
+  "Secadoras",
 ];
 
 const homeServices = [
   "Lavadoras",
   "Lava e seca",
-  "Secadoras",
   "Geladeiras",
 ];
 
